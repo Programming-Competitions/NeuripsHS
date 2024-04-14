@@ -19,7 +19,7 @@ Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar, James _-_-_ (idk
 
 ## Model arch
 
- - STT model, outputs text (whisper-small is good, finetune it on our langauges, need around 40 hours per language for a finetune)
+ - STT model, outputs text (whisper-small is good, finetune it on our langauges, need around 40 hours per language for a finetune, then convert to and inference with whisper.cpp)
  - emotion classifier model for audio
  - translation transformer, lang to lang
  - TTS model on final translated text to mediums
