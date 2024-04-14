@@ -23,3 +23,21 @@ Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar, James _-_-_ (idk
  - emotion classifier model for audio
  - translation transformer, lang to lang
  - TTS model on final translated text to mediums
+
+## Data Sourcing
+
+ - TTS/STT
+   - YT vids
+ - Emotion Classifier
+   - WIP
+ - Lang-to-lang transform
+   - Base language text
+     - [CulturaX](https://huggingface.co/datasets/uonlp/CulturaX)
+   - Instruct
+     - https://huggingface.co/datasets/sam2ai/hindi_alpaca_dolly_67k
+   - Tone/dialect
+     - Try harvesting data from Krutrim?
+     - https://huggingface.co/datasets/bigscience/xP3all
+     - https://huggingface.co/datasets/CohereForAI/xP3x
+     - https://huggingface.co/datasets/CohereForAI/aya_dataset
+     - https://huggingface.co/datasets/allenai/MADLAD-400      
