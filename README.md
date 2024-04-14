@@ -19,7 +19,7 @@ Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar, James _-_-_ (idk
 
 ## Model arch
 
- - STT model, outputs text
+ - STT model, outputs text (whisper-small is good, finetune it on our langauges, need around 1.5k hours per language)
  - emotion classifier model for audio
  - translation transformer, lang to lang
  - TTS model on final translated text to mediums
