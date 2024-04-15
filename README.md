@@ -32,7 +32,8 @@ Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar, James _-_-_ (idk
    - WIP
  - Lang-to-lang transform
    - Base language text
-     - [CulturaX](https://huggingface.co/datasets/uonlp/CulturaX)
+     - ~~[CulturaX](https://huggingface.co/datasets/uonlp/CulturaX)~~
+     - https://data.hplt-project.org/one/bitext/en-hi.raw.gz
      - Need more scraping, the culturaX values seem odd/out of proportion, though they are good enough for starters (*put this under future tasks/bias recognition in interp*)
    - Instruct
      - https://huggingface.co/datasets/sam2ai/hindi_alpaca_dolly_67k
