@@ -28,6 +28,8 @@ Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar, James _-_-_ (idk
 
  - TTS/STT
    - YT vids
+   - https://pypi.org/project/youtube-transcript-api/, gets transcript
+   - https://www.geeksforgeeks.org/download-video-in-mp3-format-using-pytube/, gets audio
  - Emotion Classifier
    - WIP
  - Lang-to-lang transform
