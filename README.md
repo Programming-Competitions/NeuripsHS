@@ -1,7 +1,7 @@
 # Neurips HS: Voice to Voice with emotion (demo title) 
 Neurips High School track
 
-Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar, James _-_-_ (idk :3)
+Current Authors: Vatsa Pandey, Samanyu Chandana, Raj Sadhankar
 
 ## Main Idea:
   - People in the community hae to use stuff like google translate to communicate, and that leaves emotion cut out, and doesnt account for dialects or tone
