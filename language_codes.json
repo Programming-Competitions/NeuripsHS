@@ -1,0 +1,36 @@
+{
+    "codes": {
+        "English": "en",
+        "Hindi": "hi",
+        "Bengali": "bn",
+        "Spanish": "es",
+        "Chinese (Simplified)": "zh-CN",
+        "Russian": "ru",
+        "Japanese": "ja",
+        "Korean": "ko",
+        "German": "de",
+        "French": "fr",
+        "Tamil": "ta",
+        "Telugu": "te",
+        "Kannada": "kn",
+        "Gujarati": "gu",
+        "Punjabi": "pa"
+    },
+    "names": [
+        "English",
+        "Hindi",
+        "Bengali",
+        "Spanish",
+        "Chinese (Simplified)",
+        "Russian",
+        "Japanese",
+        "Korean",
+        "German",
+        "French",
+        "Tamil",
+        "Telugu",
+        "Kannada",
+        "Gujarati",
+        "Punjabi"
+    ]
+}

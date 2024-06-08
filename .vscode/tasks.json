@@ -6,7 +6,7 @@
         {
             "label": "PIP Regs",
             "type": "shell",
-            "command": "pip install pyaudio pyttsx3 speechRecognition"
+            "command": "pip install gTTS pyaudio playsound==1.2.2 deep-translator SpeechRecognition google-transliteration-api"
         }
     ]
 }
