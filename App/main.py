@@ -7,7 +7,6 @@ from translate import Translator
 # Initialize the recognizer and translator
 r = sr.Recognizer()
 translator = Translator(to_lang="en")
-en_voice_id = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0"
 # Function to convert text to speech
 def SpeakText(command):
     # Initialize the engine
