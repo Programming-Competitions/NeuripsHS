@@ -4,9 +4,10 @@ import tkinter as tk
 import json
 from gtts import gTTS
 from tkinter import ttk
-import speech_recognition as sr
 from playsound import playsound
-from deep_translator import GoogleTranslator
+import speech_recognition as sr
+from googletrans import Translator  
+#from deep_translator import GoogleTranslator
 from google.transliteration import transliterate_text
 
 # Load language codes from JSON file
