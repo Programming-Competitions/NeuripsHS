@@ -1,61 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Voice to Text</title>
-    <style>
-      button {
-        border: none;
-        background: none;
-        padding: 0;
-        cursor: pointer;
-      }
-    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Humm</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button id="startButton"></button>
-    <div id="output"></div>
-
-    <script>
-      const startButton = document.getElementById("startButton");
-      const outputDiv = document.getElementById("output");
-
-      function changeShape(type) {
-        if (type === "triangle") {
-          startButton.innerHTML = `<svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,20 80,50 30,80" style="fill:black;stroke:black;stroke-width:2;" rx=15 />
-          </svg>`;
-        } else if (type === "square") {
-          startButton.innerHTML = `<svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="80" height="80" style="fill:black;stroke:black;stroke-width:2;" rx=15 />
-          </svg>`;
-        }
-      }
-
-      // Set default shape to triangle
-      changeShape("triangle");
-
-      const recognition = new (window.SpeechRecognition ||
-        window.webkitSpeechRecognition ||
-        window.mozSpeechRecognition ||
-        window.msSpeechRecognition)();
-      recognition.lang = "hi-IN"; // Set language to Hindi
-
-      recognition.onstart = () => {
-        changeShape("square");
-      };
-
-      recognition.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        outputDiv.textContent = transcript;
-      };
-
-      recognition.onend = () => {
-        changeShape("triangle");
-      };
-
-      startButton.addEventListener("click", () => {
-        recognition.start();
-      });
-    </script>
+    <header>
+      <h1>Humm</h1>
+      <h2>Communication with Emotion</h2>
+    </header>
   </body>
 </html>
