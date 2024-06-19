@@ -6,7 +6,12 @@
         {
             "label": "PIP Regs",
             "type": "shell",
-            "command": "pip install gTTS pyaudio playsound==1.2.2 deep-translator SpeechRecognition google-transliteration-api"
+            "command": "pip install flask flask-wtf flask-bootstrap googletrans==4.0.0-rc1 gtts playsound speechrecognition"
+        },
+        {
+            "label": "Run App",
+            "type": "shell",
+            "command": "python app.py",
         }
     ]
 }

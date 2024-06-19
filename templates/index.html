@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Voice Translator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1 class="text-center">Real-Time Voice Translator</h1>
+    <form method="POST">
+        <div class="form-group">
+            <label for="input_lang">Select Input Language:</label>
+            <select class="form-control" id="input_lang" name="input_lang">
+                {% for lang in language_names %}
+                <option value="{{ lang }}">{{ lang }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="output_lang">Select Output Language:</label>
+            <select class="form-control" id="output_lang" name="output_lang">
+                {% for lang in language_names %}
+                <option value="{{ lang }}">{{ lang }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-group">
+            <button type="submit" name="action" value="Start Translation" class="btn btn-primary">Start Translation</button>
+            <button type="submit" name="action" value="Kill Execution" class="btn btn-danger">Kill Execution</button>
+        </div>
+    </form>
+    {% if recognized_text %}
+    <div class="mt-4">
+        <h3>Recognized Text ⮯</h3>
+        <p>{{ recognized_text }}</p>
+    </div>
+    {% endif %}
+    {% if translated_text %}
+    <div class="mt-4">
+        <h3>Translated Text ⮯</h3>
+        <p>{{ translated_text }}</p>
+    </div>
+    {% endif %}
+</div>
+</body>
+</html>
