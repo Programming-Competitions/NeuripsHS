@@ -132,44 +132,6 @@
                 input.value = "";
             });
         }
-
-        async function handleFormSubmission(event) {
-            event.preventDefault();
-            const form = event.target;
-            const formData = new FormData(form);
-
-            try {
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData
-                });
-
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-
-                const data = await response.json();
-                if (data.recognized_text || data.translated_text) {
-                    document.querySelector('.result-box').style.display = 'block';
-                    if (data.recognized_text) {
-                        document.querySelector('.result-box h3').innerText = 'Recognized Text';
-                        document.querySelector('.result-box p').innerText = data.recognized_text;
-                    } else if (data.translated_text) {
-                        document.querySelector('.result-box h3').innerText = 'Translated Text';
-                        document.querySelector('.result-box p').innerText = data.translated_text;
-                    }
-                } else {
-                    document.querySelector('.result-box').style.display = 'none';
-                }
-            } catch (error) {
-                console.error('Error:', error);
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('translatorForm');
-            form.addEventListener('submit', handleFormSubmission);
-        });
     </script>
 </head>
 <body>
@@ -203,13 +165,19 @@
             </select>
         </div>
         <div class="form-group">
-            <button type="submit" name="action" value="Start Translation" class="btn btn-primary">Start Translation</button>
+            <button type="submit" name="action" value="Start Translation" class="btn btn-primary" onclick="this.classList.add('active')">Start Translation</button>
             <button type="button" class="btn btn-danger" onclick="endTranslation(event)">End Translation</button>
         </div>
     </form>
-    <div class="result-box" style="display: none;">
-        <h3></h3>
-        <p></p>
+    <div class="result-box" style="display: {% if recognized_text or translated_text %}block{% else %}none{% endif %};">
+        {% if recognized_text %}
+        <h3>Recognized Text</h3>
+        <p>{{ recognized_text }}</p>
+        {% endif %}
+        {% if translated_text %}
+        <h3>Translated Text</h3>
+        <p>{{ translated_text }}</p>
+        {% endif %}
     </div>
 </div>
 </body>
