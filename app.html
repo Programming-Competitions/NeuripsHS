@@ -2,28 +2,11 @@
 <html>
   <head>
     <title>Voice to Text</title>
-    <style>
-      body {
-        background-color: #000;
-        color: #fff;
-        padding: 5px;
-      }
-
-      button {
-        border: none;
-        background-color: #fff;
-        cursor: pointer;
-        border-radius: 20px;
-        padding: 5px;
-      }
-
-      .ww {
-        margin: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
+      <h2>HUMM Translator</h2>
       <label for="languageDropdown">Choose a language:</label><br />
       <select id="languageDropdown">
         <option value="hi-IN">Hindi</option>
@@ -47,16 +30,16 @@
       const synth = window.speechSynthesis;
 
       function changeShape(type) {
-        if (type === "triangle") {
-          startButton.innerHTML = `<svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,20 80,50 30,80" style="fill:black;stroke:black;stroke-width:2;" rx=15 />
-          </svg>`;
-        } else if (type === "square") {
-          startButton.innerHTML = `<svg height="100" width="100" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="80" height="80" style="fill:black;stroke:black;stroke-width:2;" rx=15 />
-          </svg>`;
-        }
-      }
+  if (type === "triangle") {
+    startButton.innerHTML = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="30,20 80,50 30,80" />
+    </svg>`;
+  } else if (type === "square") {
+    startButton.innerHTML = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <rect x="25" y="25" width="50" height="50" rx="10" />
+    </svg>`;
+  }
+}
 
       function speak(text) {
         const utterance = new SpeechSynthesisUtterance(
